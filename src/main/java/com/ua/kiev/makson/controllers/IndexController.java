@@ -1,5 +1,6 @@
 package com.ua.kiev.makson.controllers;
 
+
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

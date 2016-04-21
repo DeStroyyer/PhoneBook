@@ -2,11 +2,17 @@ package com.ua.kiev.makson;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class PhoneBookApplication {
+public class PhoneBookApplication extends SpringBootServletInitializer {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PhoneBookApplication.class, args);
-	}
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(PhoneBookApplication.class);
+//    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(PhoneBookApplication.class, args);
+    }
 }
