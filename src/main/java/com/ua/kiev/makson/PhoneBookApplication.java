@@ -7,11 +7,6 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 @SpringBootApplication
 public class PhoneBookApplication extends SpringBootServletInitializer {
 
-//    @Override
-//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-//        return application.sources(PhoneBookApplication.class);
-//    }
-
     public static void main(String[] args) {
         SpringApplication.run(PhoneBookApplication.class, args);
     }

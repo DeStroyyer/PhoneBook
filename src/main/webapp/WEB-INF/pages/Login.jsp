@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@include file="head.jsp" %>
+<%--<%@include file="head.jsp" %>--%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,22 +11,22 @@
 <center>
     <h4>User Login.</h4>
     <form:form method="post" name="loginForm">
-    <table>
-        <tr>
-            <td>User Name:</td>
-            <td><input name="userName" type="textbox"></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><input name="password" type="password"></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="right"><input type="submit" value="Submit"></td>
-        </tr>
-    </table>
-    <div style="color:red">${error}</div>
-    <center>
-        </form:form>
+        <table>
+            <tr>
+                <td>User Name:</td>
+                <td><input name="userName" type="textbox"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input name="password" type="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+        <div style="color:red">${error}</div>
 
+    </form:form>
+</center>
 </body>
 </html>
