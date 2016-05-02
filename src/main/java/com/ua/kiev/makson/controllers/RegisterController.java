@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("register")
+@RequestMapping("registration")
 public class RegisterController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String init(ModelMap modelMap) {
-        modelMap.put("info", "Hello my dear friend");
         return "Register";
     }
 

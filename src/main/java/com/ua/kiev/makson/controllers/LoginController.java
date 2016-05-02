@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 @Controller
@@ -14,8 +16,7 @@ import javax.validation.Valid;
 public class LoginController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public String init(ModelMap modelMap) {
-        modelMap.put("info", "Hello my dear friend");
+    public String init(final HttpServletRequest request, final HttpServletResponse response) {
         return "Login";
     }
 

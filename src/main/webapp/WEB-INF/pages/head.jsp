@@ -19,7 +19,8 @@
 <div class="head-wrapper">
     <ul>
         <li><a href="login">Login</a></li>
-        <li><a href="register">Create user</a></li>
+        <li><a href="registration">Create user</a></li>
+        <li><a href="https://github.com/MaximDzhezhelo/PhoneBook.git">Exit</a></li>
     </ul>
 </div>
 </body>
