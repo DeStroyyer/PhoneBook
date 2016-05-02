@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@include file="head.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +8,9 @@
     <title>User Login.</title>
 </head>
 <body>
-<h4>User Login.</h4>
-<form:form method="post" name="loginForm">
+<center>
+    <h4>User Login.</h4>
+    <form:form method="post" name="loginForm">
     <table>
         <tr>
             <td>User Name:</td>
@@ -23,7 +25,8 @@
         </tr>
     </table>
     <div style="color:red">${error}</div>
-</form:form>
+    <center>
+        </form:form>
 
 </body>
 </html>
