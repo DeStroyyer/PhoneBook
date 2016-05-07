@@ -1,13 +1,10 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="head.jsp" %>
 <html>
 <head>
     <title>Welcome</title>
 </head>
 <body>
-
-<%@ include file="/WEB-INF/pages/head.jsp" %>
-
 Welcome to welcome page!
 </body>
 </html>

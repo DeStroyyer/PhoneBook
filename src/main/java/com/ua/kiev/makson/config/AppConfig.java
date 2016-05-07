@@ -18,7 +18,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Autowired
     LoginModel loginModel;
 
-
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
