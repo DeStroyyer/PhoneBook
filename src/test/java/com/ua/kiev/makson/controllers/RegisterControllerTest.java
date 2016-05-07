@@ -27,7 +27,7 @@ public class RegisterControllerTest {
 
     private MockMvc mockMvc;
 
-    private RegisterController controller = new RegisterController();
+    private RegistrationController controller = new RegistrationController();
 
     @Before
     public void before() {
@@ -43,7 +43,7 @@ public class RegisterControllerTest {
         assertNotNull(mockMvc);
 
         mockMvc.perform(get("/registration")).andDo(print())
-                .andExpect(handler().handlerType(RegisterController.class))
+                .andExpect(handler().handlerType(RegistrationController.class))
                 .andExpect(handler().methodName("init"))
                 .andExpect(view().name("Register"))
                 .andExpect(forwardedUrl("WEB-INF/pages/Register.jsp"))
