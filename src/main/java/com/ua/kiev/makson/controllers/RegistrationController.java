@@ -16,7 +16,7 @@ public class RegistrationController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String validation(ModelMap modelMap) {
-//        return "Register";
+        return "Register";
     }
 
 }
