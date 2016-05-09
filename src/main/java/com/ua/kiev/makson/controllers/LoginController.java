@@ -1,14 +1,13 @@
 package com.ua.kiev.makson.controllers;
 
-import com.ua.kiev.makson.LoginModel;
+import com.ua.kiev.makson.controllers.form.LoginForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 @Controller
@@ -16,20 +15,20 @@ import javax.validation.Valid;
 public class LoginController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public String init(final HttpServletRequest request, final HttpServletResponse response) {
+    public String init(ModelMap modelMap) {
+        modelMap.put("loginForm", new LoginForm());
         return "Login";
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String submit(ModelMap modelMap, @ModelAttribute("loginModel") @Valid LoginModel loginModel) {
-        System.out.println("in submit" + loginModel);
-        String password = loginModel.getPassword();
-        if (password != null && password.equals("goodday")) {
-            modelMap.put("userInfo", loginModel.getUserName());
-            return "Home";
-        } else {
-            modelMap.put("error", "Invalid UserName / Password");
+    public String checkRegistrationInfo(
+            @Valid @ModelAttribute("loginForm") LoginForm loginForm,
+            BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()) {
             return "Login";
         }
+
+        return "redirect:welcome";
     }
 }

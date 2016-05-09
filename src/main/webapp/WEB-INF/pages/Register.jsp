@@ -24,7 +24,7 @@
                 </tr>
                 <tr>
                     <td>Пароль:</td>
-                    <td><form:input path="password" type="text"/></td>
+                    <td><form:input path="password" type="password"/></td>
                     <td><form:errors path="password"/></td>
                 </tr>
                 <tr>

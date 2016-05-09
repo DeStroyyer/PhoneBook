@@ -1,32 +1,39 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%--<%@include file="head.jsp" %>--%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@include file="head.jsp" %>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>User Login.</title>
+    <title>User Login</title>
+    <meta charset="utf-8">
 </head>
 <body>
 <center>
-    <h4>User Login.</h4>
-    <form:form method="post" name="loginForm">
-        <table>
-            <tr>
-                <td>User Name:</td>
-                <td><input name="userName" type="textbox"></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input name="password" type="password"></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="right"><input type="submit" value="Submit"></td>
-            </tr>
-        </table>
-        <div style="color:red">${error}</div>
-
-    </form:form>
+    <div class="box">
+        <form:form method="post" modelAttribute="loginForm">
+            <table>
+                <tr>
+                <tr class="tg">
+                    <th colspan="2"><h4>User Login</h4></th>
+                <tr>
+                <tr>
+                    <td>User Name:</td>
+                    <td><form:input path="login" type="text"/></td>
+                    <td><form:errors path="login"/></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><form:input path="password" type="password"/></td>
+                    <td><form:errors path="password"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit"
+                                                          value="Submit"></td>
+                </tr>
+            </table>
+        </form:form>
+    </div>
 </center>
 </body>
 </html>

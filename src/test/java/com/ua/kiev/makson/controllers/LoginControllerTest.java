@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.junit.Assert.assertNotNull;
@@ -36,7 +37,7 @@ public class LoginControllerTest {
 
     @Test
     public void testLogin() throws Exception {
-        final String response = controller.init(null, null);
+        final String response = controller.init(new ModelMap());
 
         assertTrue("Login".equals(response));
 
