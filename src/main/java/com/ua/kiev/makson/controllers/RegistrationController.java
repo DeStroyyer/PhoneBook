@@ -7,13 +7,12 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.validation.Valid;
 
 @Controller
 @RequestMapping("registration")
-public class RegistrationController extends WebMvcConfigurerAdapter {
+public class RegistrationController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String init(ModelMap modelMap) {
@@ -22,7 +21,7 @@ public class RegistrationController extends WebMvcConfigurerAdapter {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String checkRegistratioInfo(
+    public String checkRegistrationInfo(
             @Valid @ModelAttribute("registrationForm") RegistrationForm registrationForm,
             BindingResult bindingResult) {
 
