@@ -17,17 +17,20 @@ public class RegistrationController extends WebMvcConfigurerAdapter {
 
     @RequestMapping(method = RequestMethod.GET)
     public String init(ModelMap modelMap) {
+        modelMap.put("registrationForm", new RegistrationForm());
         return "Register";
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String checkRegistratioInfo(@Valid @ModelAttribute("registrationForm ") RegistrationForm registrationForm, BindingResult bindingResult) {
+    public String checkRegistratioInfo(
+            @Valid @ModelAttribute("registrationForm") RegistrationForm registrationForm,
+            BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             return "Register";
         }
 
-        return "Welcome";
+        return "redirect:welcome";
     }
 
 }

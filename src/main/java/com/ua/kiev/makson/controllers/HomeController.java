@@ -15,4 +15,9 @@ public class HomeController {
     public String init(final HttpServletRequest request, final HttpServletResponse response) {
         return "head";
     }
+
+    @RequestMapping(path = "welcome", method = RequestMethod.GET)
+    public String welcome(final HttpServletRequest request, final HttpServletResponse response) {
+        return "Welcome";
+    }
 }
