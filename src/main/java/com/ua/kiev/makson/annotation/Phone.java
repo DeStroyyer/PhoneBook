@@ -10,7 +10,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Phone {
 
-
     String message() default "{Phone}";
 
     Class<?>[] groups() default {};
